@@ -816,3 +816,93 @@ button:hover {
       font-size: 1.8rem;
   }
 }
+/* For mobile devices (phones) */
+@media (max-width: 480px) {
+  header {
+      flex-direction: column; /* Stack header items vertically on small screens */
+      align-items: flex-start; /* Align items to the start on small screens */
+  }
+
+  .footer-box {
+      min-width: auto; /* Reset minimum width for footer boxes on small screens */
+      margin-bottom: 20px; /* Space between footer boxes in mobile view */
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+      display: none; /* Hide navbar by default on small screens */
+      flex-direction: column; /* Stack links vertically in mobile view */
+      position: absolute;
+      top: 60px; /* Position below header */
+      left: 0;
+      right: 0;
+      background-color: #fff; /* Background color for dropdown menu */
+      z-index: 10; /* Ensure it appears above other elements */
+  }
+
+  .navbar.active {
+      display: flex; /* Show navbar when active (on menu icon click) */
+  }
+
+  #menu-icon {
+      display: block; /* Show menu icon on small screens */
+  }
+
+  .products-container .box {
+      flex-basis: calc(50% - 20px); /* Two products per row on medium screens */
+  }
+}
+
+/* For mobile devices (phones) */
+@media (max-width: 480px) {
+  header {
+      flex-direction: column; /* Stack header items vertically on small screens */
+      align-items: flex-start; 
+  }
+
+  .products-container .box {
+      flex-basis: calc(100% - 20px); /* Full width for product boxes on small screens */
+  }
+}
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .navbar {
+      display: none; /* Hide navbar by default on small screens */
+      flex-direction: column; /* Stack links vertically in mobile view */
+      position: absolute;
+      top: 60px; /* Position below header */
+      left: 0;
+      right: 0;
+      background-color: #fff; /* Background color for dropdown menu */
+      z-index: 10; /* Ensure it appears above other elements */
+  }
+
+  .navbar.active {
+      display: flex; /* Show navbar when active (on menu icon click) */
+  }
+
+  #menu-icon {
+      display: block; /* Show menu icon on small screens */
+  }
+
+  .customers-container .box {
+      flex-basis: calc(50% - 20px); /* Two products per row on medium screens */
+  }
+
+  .footer-box {
+      flex-basis: calc(50% - 20px); /* Two boxes per row on medium screens */
+  }
+}
+
+/* For mobile devices (phones) */
+@media (max-width: 480px) {
+  header {
+      flex-direction: column; /* Stack header items vertically on small screens */
+      align-items: flex-start; 
+  }
+
+  .customers-container .box,
+  .footer-box {
+      flex-basis: calc(100% - 20px); /* Full width for boxes on small screens */
+  }
+}
